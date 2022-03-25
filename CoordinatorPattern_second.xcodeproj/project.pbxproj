@@ -14,6 +14,7 @@
 		BC9D77BD27EDB84C008554EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9D77BC27EDB84C008554EC /* Assets.xcassets */; };
 		BC9D77C027EDB84C008554EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9D77BE27EDB84C008554EC /* LaunchScreen.storyboard */; };
 		BC9D77C827EDB947008554EC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D77C727EDB947008554EC /* Coordinator.swift */; };
+		BC9D77CA27EDBB06008554EC /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D77C927EDBB06008554EC /* Storyboarded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BC9D77BF27EDB84C008554EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC9D77C127EDB84C008554EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC9D77C727EDB947008554EC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BC9D77C927EDBB06008554EC /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				BC9D77B527EDB848008554EC /* SceneDelegate.swift */,
 				BC9D77B727EDB848008554EC /* ViewController.swift */,
 				BC9D77C727EDB947008554EC /* Coordinator.swift */,
+				BC9D77C927EDBB06008554EC /* Storyboarded.swift */,
 				BC9D77B927EDB848008554EC /* Main.storyboard */,
 				BC9D77BC27EDB84C008554EC /* Assets.xcassets */,
 				BC9D77BE27EDB84C008554EC /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				BC9D77C827EDB947008554EC /* Coordinator.swift in Sources */,
 				BC9D77B827EDB848008554EC /* ViewController.swift in Sources */,
+				BC9D77CA27EDBB06008554EC /* Storyboarded.swift in Sources */,
 				BC9D77B427EDB848008554EC /* AppDelegate.swift in Sources */,
 				BC9D77B627EDB848008554EC /* SceneDelegate.swift in Sources */,
 			);
