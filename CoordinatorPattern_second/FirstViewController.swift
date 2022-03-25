@@ -11,6 +11,8 @@ import UIKit
 // Don't forget to assign name of storyboard to Storyboard ID in storyboard (FirstViewController)
 
 class FirstViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +20,11 @@ class FirstViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func buyButtonPressed(_ sender: UIButton) {
+        coordinator?.buySubscrition()
     }
     
     @IBAction func createAccountButtonPressed(_ sender: UIButton) {
+        coordinator?.createAccount()
     }
     
 
