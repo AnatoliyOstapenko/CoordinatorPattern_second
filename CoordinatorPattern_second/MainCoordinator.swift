@@ -8,12 +8,11 @@
 import Foundation
 import UIKit
 
-class MainCoordinator: Coordinator {
-    
-    var childCoordinators:[Coordinator] = []
+class MainCoordinator: CoordinatorProtocol {
+    var childCoordinators:[CoordinatorProtocol] = []
     var navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+    required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
@@ -23,15 +22,28 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
         
     }
+    
     func buySubscrition() {
-        let vc = BuyViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        let child = BuyCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
+    
     func createAccount() {
-        let vc = CreateAccountViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        let child = CreateAccountCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+    }
+    
+    func childDidFinish(_ child: CoordinatorProtocol?) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
     }
     
     

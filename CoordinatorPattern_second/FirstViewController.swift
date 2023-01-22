@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SQLite3
 
 
 // Don't forget to assign name of storyboard to Storyboard ID in storyboard (FirstViewController)

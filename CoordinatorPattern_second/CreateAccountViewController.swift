@@ -9,12 +9,16 @@ import UIKit
 
 class CreateAccountViewController: UIViewController, Storyboarded {
     
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: CreateAccountCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "Create Account VC"
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.stop()
     }
 
 
